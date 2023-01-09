@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_110735) do
     t.text "description_short"
     t.text "description_long"
     t.integer "price"
+    t.boolean "is_shown"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

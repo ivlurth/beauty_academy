@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+    <% if current_user.role == 1 %>
+        <%= form_with model: @course do |form| %>
+        <p> <%= form.label :name, 'Name'%> </p>
+        <p> <%= form.text_field :name %> </p>
+        <p> <%= form.label :description_short, 'Short description'%> </p>
+        <p> <%= form.text_area :description_short, rows: 5 %> </p>
+        <p> <%= form.label :description_long, 'Long description'%> </p>
+        <p> <%= form.text_area :description_long, rows: 20 %> </p>
+        <p> <%= form.label :description_short, 'Price'%> </p>
+        <p> <%= form.text_field :price %> </p>
+        <p> <%= form.label :is_shown, 'Is this course shown on the website?'%> </p>
+        <p> <%= form.check_box :is_shown, as: :boolean %> </p>
+        <p> <%= form.submit 'Ok' %></p>
+        <% end %>
+
+    <% else %>
+    <p>Sorry, you are not allowed to edit this page!</p>
+    <% end %>
+
+<% else %>
+<p>Sorry, you are not allowed to edit this page!</p>
+<% end %>

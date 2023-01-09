@@ -5,6 +5,7 @@ class CreateCourses < ActiveRecord::Migration[7.0]
       t.text :description_short
       t.text :description_long
       t.integer :price
+      t.boolean :is_shown
 
       t.timestamps
     end

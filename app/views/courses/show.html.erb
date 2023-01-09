@@ -1,0 +1,16 @@
+<p><%= @course.name %></p>
+<p><%= @course.description_long %></p>
+<p><%= @course.price %></p>
+
+
+<% if user_signed_in?%>
+
+    <% if current_user.role == 1%>
+        <p><%= link_to 'Edit', edit_course_path(@course)%></p>
+        <p><%= button_to 'Delete', course_path(@course), method: :delete%></p>
+    <% end %>
+
+
+<% end %>
+
+<p> <%= link_to 'Back', courses_path %></p>

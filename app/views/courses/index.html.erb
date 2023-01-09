@@ -1,0 +1,28 @@
+<% if user_signed_in?%>
+    <% if current_user.role == 1 %>
+
+        <% @course.each do |course|%>       
+            <p> <%= link_to "#{course.name}", course_path(course) %> </p>
+            <p> <%= course.description_short %> </p>
+            <p> <%= course.price %> </p>
+        <% end %>  
+    <% else %> 
+    <% @course.each do |course|%>
+            <% if course.is_shown %>
+                <p> <%= link_to "#{course.name}", course_path(course) %> </p>
+                <p> <%= course.description_short %> </p>
+                <p> <%= course.price %> </p>
+            <% end %>
+        <% end %> 
+
+    <% end%>
+
+<% else %>
+        <% @course.each do |course|%>
+            <% if course.is_shown %>
+                <p> <%= link_to "#{course.name}", course_path(course) %> </p>
+                <p> <%= course.description_short %> </p>
+                <p> <%= course.price %> </p>
+            <% end %>
+        <% end %>
+    <% end %>

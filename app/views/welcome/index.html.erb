@@ -14,9 +14,18 @@
   <% if user_signed_in? %>
     <span>Здравствуйте, <%= current_user.email %></span>
     <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+    <% if current_user.role == 1%>
+          <%= link_to 'Add new course', new_course_path %>
+           <% end %>
 <% else %>
     <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
 <% end %>
+
+  <%= link_to 'Courses', courses_path%>
+
+
+
+ 
 
     <%= yield %>
   </body>
