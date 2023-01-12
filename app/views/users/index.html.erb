@@ -1,3 +1,7 @@
-<% @users.each do |user|%>
-<p>email: <%= user.email %> </p>
+<% if user_signed_in? && current_user.role == 1%>
+    <% @users.each do |user|%>
+    <p>email: <%= user.email %> </p>
+    <% end %>
+<% else %>
+    <p> You are not allowed to this page! </p>
 <% end %>

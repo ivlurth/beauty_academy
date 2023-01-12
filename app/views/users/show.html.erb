@@ -1,2 +1,15 @@
-<%= @user.email %>
-<%= @user.phone %>
+<% if user_signed_in? && current_user.id == @user.id %>
+    
+    <%= @user.email %>
+    <% if @user.phone == ''%>
+        <p> You haven't entered your phone number yet!</p>
+        <p> Please, follow <%= link_to 'this link', edit_user_path(@user) %> to add it! </p>
+        <p> Remember that you need to enter your phone number to join group chats in WhatsApp with our curators. </p>
+    <% else %>
+        <%= @user.phone %>
+        <p><%= link_to 'Edit', edit_user_path(@user) %></p>
+    <% end %>
+    <%= link_to 'Edit your registration information', edit_user_registration_path(@user) %>
+<% else%>
+    <p> You are not allowed to this page! </p>
+<% end %>
