@@ -8,6 +8,13 @@
     <% if current_user.role == 1%>
         <p><%= link_to 'Edit', edit_course_path(@course)%></p>
         <p><%= button_to 'Delete', course_path(@course), method: :delete%></p>
+        <% content_exists = Content.where(course_id = @course_id) %>
+        <% if content_exists.size == 0 %>
+
+            <p><%= link_to 'Add content', new_content_path(:id => params[:id])%></p>
+        <% else %>
+            <p><%= link_to 'Edit content', edit_content_path(:id => params[:id])%></p>
+        <% end %>
     <% end %>
 
     
