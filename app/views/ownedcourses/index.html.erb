@@ -1,0 +1,9 @@
+<% if @ownedcourses.size != 0 %>     
+    <% @ownedcourses.each do |ownedcourse|%>
+        <% owned_course_name = Course.find(id = ownedcourse.course_id)%>
+        <p><%= ownedcourse.course_id %> </p>
+        <p><%= owned_course_name.name %> </p>
+    <% end %>
+<% else %>
+    <p>You dont have</p>
+<% end %>

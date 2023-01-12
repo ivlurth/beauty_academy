@@ -1,0 +1,2 @@
+class Ownedcourse < ApplicationRecord
+end

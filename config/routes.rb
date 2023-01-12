@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   resources :courses
   resources :users
-  resources :owned_courses
+  resources :ownedcourses
+
+
 
   # Defines the root path route ("/")
   root "welcome#index"

@@ -10,6 +10,13 @@
         <p><%= button_to 'Delete', course_path(@course), method: :delete%></p>
     <% end %>
 
+    
+    <% course_owned = Ownedcourse.where(course_id: @course.id, user_id: current_user.id)%>
+    <% if course_owned.size != 0 %>
+        <p>You already have this course</p>
+    <% else %>
+        <%= link_to 'Buy', new_ownedcourse_path(:id => params[:id]) %>
+    <% end %>
 
 <% end %>
 
