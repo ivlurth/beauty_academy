@@ -1,4 +1,6 @@
 <%= render "shared/header"%>
+<div class = "content-part">
+    <div class = "content-text">
 <h1 class="page_name">USER'S PROFILE</h1>
 
 <% if user_signed_in? && current_user.id == @user.id %>
@@ -17,5 +19,7 @@
     <p> You are not allowed to this page! </p>
 <% end %>
 
-
+ </div>
+</div>
+  
 <%= render "shared/footer"%>

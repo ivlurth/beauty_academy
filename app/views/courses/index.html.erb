@@ -1,32 +1,30 @@
 <%= render "shared/header"%>
+<div class = "courses">
+    <div class = "content-text">
 <h1 class="page_name">OUR COURSES</h1>
-<% if user_signed_in?%>
-    <% if current_user.role == 1 %>
-
-        <% @course.each do |course|%>       
-            <p> <%= link_to "#{course.name}", course_path(course) %> </p>
-            <p> <%= course.description_short %> </p>
-            <p> <%= course.price %> </p>
-        <% end %>  
-    <% else %> 
-    <% @course.each do |course|%>
-            <% if course.is_shown %>
-                <p> <%= link_to "#{course.name}", course_path(course) %> </p>
-                <p> <%= course.description_short %> </p>
-                <p> <%= course.price %> </p>
-            <% end %>
-        <% end %> 
-
-    <% end%>
+<% if user_signed_in? && current_user.role == 1%>
+    <% @course.each do |course|%>       
+        <p> <%= link_to "#{course.name}", course_path(course) %> </p>
+        <p> <%= course.description_short %> </p>
+        <p> <%= course.price %> </p>
+    <% end %>  
 
 <% else %>
-        <% @course.each do |course|%>
-            <% if course.is_shown %>
-                <p> <%= link_to "#{course.name}", course_path(course) %> </p>
-                <p> <%= course.description_short %> </p>
-                <p> <%= course.price %> </p>
-            <% end %>
+    
+    <% @course.each do |course|%>
+        <% if course.is_shown %>
+            <div class="course">
+            <%= image_tag("user.png", class: "course-img")%> 
+            <h1 class="course-name"> <%= link_to "#{course.name}", course_path(course) %> </h1>
+            <p><%= course.description_short %> </p>
+            <p><%= course.price %>$</p>
+            </div>
         <% end %>
     <% end %>
+  
+<% end %>
 
+ </div>
+</div>
+  
 <%= render "shared/footer"%>

@@ -1,4 +1,6 @@
 <%= render "shared/header"%>
+<div class = "content-part">
+    <div class = "content-text">
 <h1 class="page_name"><%= @course.name %></h1>
 <p><%= @course.description_long %></p>
 <p><%= @course.price %></p>
@@ -29,4 +31,8 @@
 <% end %>
 
 <p> <%= link_to 'Back', courses_path %></p>
+
+ </div>
+</div>
+  
 <%= render "shared/footer"%>

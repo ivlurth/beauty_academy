@@ -150,15 +150,25 @@ header {
 
 .content-part {
     width: 60%;
+    border: solid;
+    border-color: #FF4F85;
+    border-radius: 20pt;
     font-family: Georgia,serif;
-    padding-top:20px;
-    margin: auto;
+    padding:20px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40pt;
 
 }
 
-.content-part img {
+.content-img {
     width: 200px;
+    float: left;
+    margin: 10px;
 }
+
+
 
 
 

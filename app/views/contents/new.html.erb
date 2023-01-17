@@ -1,4 +1,6 @@
 <%= render "shared/header"%>
+<div class = "content-part">
+    <div class = "content-text">
 <h1 class="page_name"><%= @course.name %></h1>
 
 <% if user_signed_in? && current_user.role == 1 %>
@@ -16,5 +18,9 @@
 <p> You are not allowed to edit such content! </p>
 
 <% end%>
+
+ </div>
+</div>
+  
 
 <%= render "shared/footer"%>

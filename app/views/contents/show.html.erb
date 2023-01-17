@@ -2,6 +2,8 @@
 <% course_is_owned = Ownedcourse.where(user_id: current_user.id, course_id: @content.course_id ) %>
 
 <%= render "shared/header"%>
+<div class = "content-part">
+    <div class = "content-text">
 <h1 class="page_name"><%= course.name %></h1>
 
 <% if user_signed_in? && current_user.role == 1%>
@@ -11,7 +13,7 @@
     <%= raw @content.body %>
 
 <% elsif user_signed_in? && course_is_owned.size != 0  %>
-    <% course = Course.find(id = @content.course_id) %>
+    
     <%= course.name %>
     <%= raw @content.body %>
 
@@ -20,4 +22,8 @@
 <p> >You are not allowed to this content! </p>
 
 <% end %>
+
+ </div>
+</div>
+  
 <%= render "shared/footer"%>

@@ -1,0 +1,35 @@
+.course {
+    border: solid;
+    border-color: #FF4F85;
+    border-radius: 20px;    
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.courses {
+    width: 60%;
+   
+    font-family: Georgia,serif;
+    padding:20px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40pt;
+
+}
+
+.course-name {
+    
+    margin-bottom: 10px;
+}
+
+.course-img {
+    height: 80pt;
+    float: left;
+    margin-left: 10pt;
+}
+
