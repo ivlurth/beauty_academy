@@ -1,0 +1,167 @@
+body {
+    font-family: Courier, monospace;   
+}
+
+@media only screen and (max-width: 420px) {
+    .wrapper {
+     width:360px;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 10pt; 
+     
+    }
+    .header-icons {
+        height: 10pt;
+    }
+    header {
+        margin-top: 13pt;
+    }
+   }
+   @media only screen and (max-width: 768px) and (min-width: 450px) {
+    .wrapper {
+     width:766px;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 10pt; 
+    }
+    .header-icons {
+        height: 10pt;
+    }
+    header {
+        margin-top: 13pt;
+    }
+   }
+   @media only screen and (max-width: 992px) and (min-width: 769px) {
+    .wrapper {
+     width:991px;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 20pt;
+    }
+    .header-icons {
+        height: 20pt;
+    }
+    header {
+        margin-top: 25pt;
+    }
+   }
+   @media only screen and (min-width: 1200px) {
+    .wrapper {
+     width:1280px;  
+     margin-left: auto;
+     margin-right: auto;   
+     font-size: 20pt;
+    }
+    .header-icons {
+        height: 20pt;
+    }
+    header {
+        margin-top: 25pt;
+    }
+   
+   }
+
+a {
+    text-decoration: none;
+    color: #FF4F85; 
+    font-weight: bold;
+}
+
+
+.user_menu {
+    background-color: #070580;
+    position: fixed;
+    top: 0;
+    right: 0;  
+    width: 100%;
+}
+
+.user_menu_element {
+    display: inline; 
+    margin-right: 10px; 
+    
+}
+
+.user_menu_element div {
+    height: 15pt;
+    width: 10%;
+    
+}
+
+.user_menu a {
+    padding-top: 10pt;
+    text-decoration: none;
+    color: #FF4F85;
+    font-weight: bold;
+}
+
+
+header {
+    
+    background-color: #070580;
+    
+}
+
+
+
+
+.main-menu {
+    background-color: #070580;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    text-decoration: none;
+    height: 50pt;
+    
+}
+
+
+
+
+.main-menu-element {
+    display: block;
+    width: 16%;
+    height: 50pt;
+    color: #FF4F85;   
+    font-weight: bold; 
+    text-align: center;
+    padding-top: 15px;
+   
+}
+
+
+.content_section  {
+    background-color: #ffffff;
+    width:100%;
+    display: block;
+    padding: 20, 20, 20, 20;
+    margin: auto;
+}
+
+.page_name {
+    font-size: 20pt;
+    margin:auto;
+    font-family: Georgia,serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.content-part {
+    width: 60%;
+    font-family: Georgia,serif;
+    padding-top:20px;
+    margin: auto;
+
+}
+
+.content-part img {
+    width: 200px;
+}
+
+
+
+
+
+

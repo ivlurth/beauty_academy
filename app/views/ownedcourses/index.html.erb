@@ -1,3 +1,5 @@
+<%= render "shared/header"%>
+<h1 class="page_name">YOUR COURSES</h1>
 <% if @ownedcourses.size != 0 %>     
     <% @ownedcourses.each do |ownedcourse|%>
         <% owned_course_name = Course.find(id = ownedcourse.course_id)%>
@@ -6,5 +8,6 @@
         <p><%= link_to "#{owned_course_name.name}", content_path(content) %> </p>
     <% end %>
 <% else %>
-    <p>You dont have</p>
+    <p>You dont have any courses yet! <%= link_to "Follow this link", courses_path %> to find course you need. </p>
 <% end %>
+<%= render "shared/footer"%>

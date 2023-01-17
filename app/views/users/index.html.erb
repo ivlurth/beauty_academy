@@ -1,7 +1,17 @@
+<%= render "shared/header"%>
+<h1 class="page_name">All active users</h1>
 <% if user_signed_in? && current_user.role == 1%>
     <% @users.each do |user|%>
+    <p>id: <%= user.id %></p>
     <p>email: <%= user.email %> </p>
+    <p>phone: <%= user.phone %> </p>
+    <p>role: <% if user.role == 1%>
+    admin <% else %>
+    user <% end %>
+    <br><br>
     <% end %>
 <% else %>
     <p> You are not allowed to this page! </p>
 <% end %>
+
+<%= render "shared/footer"%>

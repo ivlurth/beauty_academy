@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Beauty Academy</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<%= render "shared/header"%>
+    
+    <h1 class = "page_name">ABOUT US</h1>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
+      
 
-  <body>
+      <div>Earn more 5000 dollars every month in beauty-sphere in different countries in the world is real.  My students and I have improved it. If you want the same, you're in the right place.
+      <br><br>
+«Beauty will save the world» suppose you heard this words. And more than once. Beauty is a subjective concept and everyone defines its categories by own. Today we will talk about those who are behind the Beauty.
+<br><br>
+Every year the technique is perfecting, and I will teach you the most modern methods of hair extensions. During the course, we will learn the most universal method of hair extension, which is suitable for both owners of thick and thin hair. Hot capsule or Italian hair extension technology is a method which include the smallest bracings of all. And I'll teach you how to make capsules the size of a grain of rice!
+<br><br>
+<%= image_tag('IMG_5846.JPG', class: "content-part", width: "200") %>
+<br><br>
 
-  <% if user_signed_in? %>
-    <span>Здравствуйте, <%= current_user.email %></span>
-    <%= link_to 'My profile', user_path(current_user) %>
-    <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
-    <% if current_user.role == 1%>
-          <%= link_to 'Add new course', new_course_path %>
-           <% end %>
-<% else %>
-    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-<% end %>
+Why my course? It hasn’t analogies. 24/7 support from the curators and me, online translations, calls with the curators and me, homework, exams, certificates and diplomas.
+<br><br>
+How to started The Beauty Academy? Traveling around the world and visiting beauty for hair extension. I noticed that the quality of specialists in any country loses to the quality of the work of Russian masters. Because I have experience in teaching and wishing to train or improve existing specialists to the level of Russian masters. So, the idea came up to created online course where everyone could learn the profession of hair extensions from anywhere in the world. 
+<br><br>
+The hair extension course consist of 2 parts: preparation hair for extension and hair extension. 
 
-  <%= link_to 'Courses', courses_path%>
+</div>
 
-
-
- 
-
-    <%= yield %>
-  </body>
-</html>
+<%= render "shared/footer"%>

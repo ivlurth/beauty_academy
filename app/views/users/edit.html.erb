@@ -1,5 +1,9 @@
+<%= render "shared/header"%>
+<h1 class="page_name">EDIT PHONE</h1>
 <%= form_with model: @user do |form| %>
         <p> <%= form.label :phone, 'Your new phone:'%> </p>
         <p> <%= form.telephone_field :phone %> </p>
         <p> <%= form.submit 'Ok' %></p>
 <% end %>
+
+<%= render "shared/footer"%>

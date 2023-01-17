@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beauty Academy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    
+  </head>
+
+
+
+
+  <body>
+
+  <header class="wrapper">
+
+    <%= image_tag("25.jpg", class: "header_img", width: "100%") %>
+    
+    <div class="user_menu">
+      
+
+      <% if user_signed_in? %>
+
+        <div class="user_menu_element"><%= image_tag('user.png', class: "header-icons")%> <%= link_to 'My profile', user_path(current_user) %></div> 
+        <div class="user_menu_element"><%= image_tag('edit.png', class: "header-icons")%> <%= link_to 'My courses', ownedcourses_path %></div> 
+        <div class="user_menu_element"><%= image_tag('sign-out-alt.png', class: "header-icons")%> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></div> 
+
+      <% else %>
+
+        <div class="user_menu_element"><%= image_tag('arrow-right.png', class: "header-icons")%> <%= link_to 'Sign in', new_user_session_path %></div> 
+        <div class="user_menu_element"><%= image_tag('users.png', class: "header-icons")%> <%= link_to 'Sign up', new_user_registration_path %></div> 
+
+      <% end %>
+
+    </div>
+
+  </header>
+
+  <section class="wrapper">
+    <div class="main-menu">
+        <div class="main-menu-element"><%= link_to 'About us', root_path %></div>
+        <div class="main-menu-element"><%= link_to 'Our courses', courses_path%></div>
+        <div class="main-menu-element">Shop</div>
+        <div class="main-menu-element">Blog</div>
+        <div class="main-menu-element">Contacts</div>
+        <div class="main-menu-element">FAQ</div>  
+      </div>
+  </section>
+
+  <section class="wrapper">
+
+    <div class="content_section">
+
+    <div class = "content-part">
+    <div class = "content-text">

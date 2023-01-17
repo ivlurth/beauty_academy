@@ -1,3 +1,5 @@
+<%= render "shared/header"%>
+<h1 class="page_name">ADD COURSE</h1>
 <% if user_signed_in? %>
     <% if current_user.role == 1 %>
         <%= form_with model: @course do |form| %>
@@ -21,3 +23,4 @@
 <% else %>
 <p>Sorry, you are not allowed to edit this page!</p>
 <% end %>
+<%= render "shared/footer"%>
