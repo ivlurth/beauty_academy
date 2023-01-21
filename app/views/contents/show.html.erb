@@ -10,11 +10,13 @@
 
     
     <%= raw @content.body %>
+    <%= link_to "Back", :back %>
 
 <% elsif user_signed_in? && course_is_owned.size != 0  %>
     
     
     <%= raw @content.body %>
+    <%= link_to "Back", :back %>
 
 <% else %>
 
