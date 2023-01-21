@@ -1,4 +1,6 @@
 <%= render "shared/header"%>
+<div class = "courses">
+    <div class = "content-text">
 <h1 class="page_name"><%= @course.name %></h1>
 Do you want to buy <%= @course.name %>?
     <%= form_with model: @ownedcourse do |form| %>

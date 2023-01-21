@@ -1,65 +1,10 @@
 body {
-    font-family: Courier, monospace;   
+    font-family: 'Gilroy-Medium';  
+    background-color: aliceblue;
 }
 
-@media only screen and (max-width: 420px) {
-    .wrapper {
-     width:360px;
-     margin-left: auto;
-     margin-right: auto;
-     font-size: 10pt; 
-     
-    }
-    .header-icons {
-        height: 10pt;
-    }
-    header {
-        margin-top: 13pt;
-    }
-   }
-   @media only screen and (max-width: 768px) and (min-width: 450px) {
-    .wrapper {
-     width:766px;
-     margin-left: auto;
-     margin-right: auto;
-     font-size: 10pt; 
-    }
-    .header-icons {
-        height: 10pt;
-    }
-    header {
-        margin-top: 13pt;
-    }
-   }
-   @media only screen and (max-width: 992px) and (min-width: 769px) {
-    .wrapper {
-     width:991px;
-     margin-left: auto;
-     margin-right: auto;
-     font-size: 20pt;
-    }
-    .header-icons {
-        height: 20pt;
-    }
-    header {
-        margin-top: 25pt;
-    }
-   }
-   @media only screen and (min-width: 1200px) {
-    .wrapper {
-     width:1280px;  
-     margin-left: auto;
-     margin-right: auto;   
-     font-size: 20pt;
-    }
-    .header-icons {
-        height: 20pt;
-    }
-    header {
-        margin-top: 25pt;
-    }
-   
-   }
+
+
 
 a {
     text-decoration: none;
@@ -112,7 +57,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-around; 
     text-decoration: none;
-    height: 50pt;
     
 }
 
@@ -121,8 +65,8 @@ header {
 
 .main-menu-element {
     display: block;
-    width: 16%;
-    height: 50pt;
+    width: 25%;
+   
     color: #FF4F85;   
     font-weight: bold; 
     text-align: center;
@@ -136,15 +80,19 @@ header {
     width:100%;
     display: block;
     padding: 20, 20, 20, 20;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40pt;
+    padding-bottom: 40pt;
 }
 
 .page_name {
-    font-size: 20pt;
+    font-size: 30pt;
     margin:auto;
-    font-family: Georgia,serif;
+    font-family: 'Forum';
     text-align: center;
     margin-bottom: 30px;
+    color:#FF4F85;
 }
 
 
@@ -153,12 +101,12 @@ header {
     border: solid;
     border-color: #FF4F85;
     border-radius: 20pt;
-    font-family: Georgia,serif;
-    padding:20px;
-    margin-top: 40px;
+    font-family: 'Montserrat';
+    padding:40px;
+    
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40pt;
+    
 
 }
 
@@ -168,7 +116,129 @@ header {
     margin: 10px;
 }
 
+footer {
+    background-color: #070580;
+    
+}
 
+
+
+.footer-two-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20pt;
+    width:60%;
+    
+}
+
+.links {
+    width: 30%;
+
+}
+
+.info {
+    width: 60%;
+    color:#ffffff;
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+
+@media only screen and (max-width: 449px) {
+    .wrapper {
+     width:360px;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 10pt; 
+     
+    }
+    .header-icons {
+        height: 10pt;
+    }
+    header {
+        margin-top: 13pt;
+    }
+    .main-menu {
+        height: 40pt;
+    }
+    .main-menu-element {
+        height: 40pt;
+    }
+    .content-part {
+        width: 70%;
+        padding: 15pt;
+    }
+   }
+
+
+   @media only screen and (max-width: 768px) and (min-width: 450px) {
+    .wrapper {
+     width:766px;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 10pt; 
+    }
+    .header-icons {
+        height: 10pt;
+    }
+    header {
+        margin-top: 13pt;
+    }
+    .main-menu {
+        height: 40pt;
+    }
+    .main-menu-element {
+        height: 40pt;
+    }
+   }
+
+
+   @media only screen and (max-width: 1199px) and (min-width: 769px) {
+    .wrapper {
+     width:991px;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 20pt;
+    }
+    .header-icons {
+        height: 20pt;
+    }
+    header {
+        margin-top: 25pt;
+    }
+    .main-menu {
+        height: 50pt;
+    }
+    .main-menu-element {
+        height: 50pt;
+    }
+   }
+
+
+   @media only screen and (min-width: 1200px) {
+    .wrapper {
+     width:1280px;  
+     margin-left: auto;
+     margin-right: auto;   
+     font-size: 20pt;
+    }
+    .header-icons {
+        height: 20pt;
+    }
+    header {
+        margin-top: 25pt;
+    }
+    .main-menu {
+        height: 50pt;
+    }
+    .main-menu-element {
+        height: 50pt;
+    }
+   
+   }
 
 
 

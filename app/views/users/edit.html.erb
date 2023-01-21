@@ -2,13 +2,17 @@
 <div class = "content-part">
     <div class = "content-text">
 <h1 class="page_name">EDIT PHONE</h1>
+<% if current_user.id == @user.id %>
+<div class="forms">
 <%= form_with model: @user do |form| %>
-        <p> <%= form.label :phone, 'Your new phone:'%> </p>
-        <p> <%= form.telephone_field :phone %> </p>
-        <p> <%= form.submit 'Ok' %></p>
+        <p> <%= form.label :phone, 'New phone'%> </p>
+        <p> <%= form.telephone_field :phone , class: "beautiful-textfield" %> </p>
+        <p class="center-button"> <%= form.submit 'Save' , class: "button-1"%></p>
 <% end %>
-
-
+</div>
+<% else %>
+<p>You are not allowed to edit another user's phone!</p>
+<% end %>
  </div>
 </div>
   

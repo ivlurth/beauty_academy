@@ -1,24 +1,36 @@
 <%= render "shared/header"%>
 <div class = "content-part">
     <div class = "content-text">
-<h1 class="page_name">USER'S PROFILE</h1>
+<h1 class="page_name">YOUR PROFILE</h1>
 
 <% if user_signed_in? && current_user.id == @user.id %>
     
-    <%= @user.email %>
+    <div class="user-profile">
+    <p>Hi, <span class="email"><%= @user.email %></span></p>
+    <p><%= link_to 'Edit profile', edit_user_registration_path(@user), class: "button-1" %><p>
+    </div>
+
+    <div class="user-profile">
     <% if @user.phone == ''%>
         <p> You haven't entered your phone number yet!</p>
         <p> Please, follow <%= link_to 'this link', edit_user_path(@user) %> to add it! </p>
         <p> Remember that you need to enter your phone number to join group chats in WhatsApp with our curators. </p>
     <% else %>
-        <%= @user.phone %>
-        <p><%= link_to 'Edit', edit_user_path(@user) %></p>
+        <p>Your phone number: <%= @user.phone %></p>
+        <p>Please, check, if it's correct, because we will use this phone to add you to our chats with curators in WhatsApp.</p>
+        <p><%= link_to 'Edit your phone', edit_user_path(@user), class: "button-1"%></p>
     <% end %>
-    <%= link_to 'Edit your registration information', edit_user_registration_path(@user) %>
+    </div>
+    <% if current_user.role == 1%>
+        <p> Admin features: </p>
+        <%= link_to 'Add course', new_course_path %>
+        <%= link_to 'All Users', users_path %>
+        <%= link_to 'Owned courses', welcome_formanager_path %>
+    <% end %>
 <% else%>
     <p> You are not allowed to this page! </p>
 <% end %>
-
+    
  </div>
 </div>
   

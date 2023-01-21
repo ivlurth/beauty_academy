@@ -13,7 +13,7 @@
 .courses {
     width: 60%;
    
-    font-family: Georgia,serif;
+    font-family: 'Montserrat';
     padding:20px;
     margin-top: 40px;
     margin-left: auto;
@@ -32,4 +32,171 @@
     float: left;
     margin-left: 10pt;
 }
+
+.faq {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.faq p {
+    margin-bottom: 10px;
+}
+
+.question {
+    color:  #FF4F85;
+    font-weight: bold;
+    font-size: 25pt;
+
+}
+
+.answer {
+    color: #070580;
+    font-weight: bold;
+    font-size: 25pt;
+}
+
+.email {
+    color:  #FF4F85;
+    font-weight: bold;
+}
+
+.user-profile {
+    margin-top: 30px;
+}
+
+
+
+.button-1 {
+  background-color: #FF4F85;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+p {
+    margin-top: 10pt;
+}
+
+
+
+
+
+  .checkbox-wrapper-2 .ikxBAC {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC,
+  .checkbox-wrapper-2 .ikxBAC::after {
+    transition: all 100ms ease-out;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .checkbox-wrapper-2 input[type=checkbox] {
+    cursor: default;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked {
+    background-color: #FF4F85;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked::after {
+    background-color: #fff;
+    left: 13px;
+  }
+
+  .checkbox-wrapper-2 :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked:hover {
+    background-color: #ff3471;
+  }
+
+  .beautiful-textfield {
+    background: transparent;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15pt;
+    height: 20pt;
+    border: 1px solid #FF4F85;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  .forms {
+    width: 215px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .form-resetpassword {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .center-button {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .smalltext {
+    font-size: 12pt;
+  }
+
+ 
 

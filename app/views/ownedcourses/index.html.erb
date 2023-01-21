@@ -8,11 +8,12 @@
     <% @ownedcourses.each do |ownedcourse|%>
 
         <% owned_course_name = Course.find(id = ownedcourse.course_id)%>
-        <% content = Content.find(course_id = ownedcourse.course_id) %>
+        <% content = Content.find_by(course_id: ownedcourse.course_id) %>
 
         <div class="course">
-        <p><%= ownedcourse.course_id %> </p>
+        
         <p class="course-name"><%= link_to "#{owned_course_name.name}", content_path(content) %> </p>
+        <p><%= owned_course_name.description_short %></p>
         </div>
     <% end %>
 <% else %>

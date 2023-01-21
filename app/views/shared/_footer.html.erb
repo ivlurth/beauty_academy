@@ -2,12 +2,20 @@
   </div>
   </section>
   
-  <footer class="footer">
-    <section class="footer">
-
-    </footer>
-  </footer>
-
+  <footer class="wrapper">
+    <div class="footer-two-columns">
+    <div class="links">
+    <p><%= link_to"About us", root_path %></p>
+    <p><%= link_to"Contacts", welcome_contacts_path %></p>
+    <p><%= link_to"FAQ", welcome_faq_path %></p>
+    </div>
+    <div class="info">
+    <p>Свидетельство о государственной регистрации №690871770 выдано Логойским исполкомом</p>
+    <p>+375(25)690-68-00</p>
+    </div>
     
-  </body>
-</html>
+    </div>
+    <div class="images">
+    <%= image_tag('HORIZONTAL WHITE.png', class: "show-image") %>
+    </div>
+  </footer>

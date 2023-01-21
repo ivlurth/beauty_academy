@@ -1,9 +1,19 @@
 <%= render "shared/header"%>
 <div class = "content-part">
     <div class = "content-text">
+
+
+<% if @course.is_shown || (user_signed_in? && current_user.role == 1) %>
 <h1 class="page_name"><%= @course.name %></h1>
-<p><%= @course.description_long %></p>
-<p><%= @course.price %></p>
+<div><%= raw @course.description_long %> </div>
+
+<% if @course.id == 3 || @course.id == 4 || @course.id == 5 %>
+
+<%end%>
+
+
+<br>
+
 
 
 <% if user_signed_in?%>
@@ -11,27 +21,36 @@
     <% if current_user.role == 1%>
         <p><%= link_to 'Edit', edit_course_path(@course)%></p>
         <p><%= button_to 'Delete', course_path(@course), method: :delete%></p>
-        <% content_exists = Content.where(course_id = @course_id) %>
+        <% content_exists = Content.where(course_id: @course.id) %>
         <% if content_exists.size == 0 %>
 
             <p><%= link_to 'Add content', new_content_path(:id => params[:id])%></p>
         <% else %>
-            <p><%= link_to 'Edit content', edit_content_path(:id => params[:id])%></p>
+            <% content = Content.find_by(course_id: @course.id) %>
+            <p><%= link_to 'Show content', content_path(content) %>
+            <p><%= link_to 'Edit content', edit_content_path(content)%></p>
         <% end %>
     <% end %>
+
 
     
     <% course_owned = Ownedcourse.where(course_id: @course.id, user_id: current_user.id)%>
     <% if course_owned.size != 0 %>
-        <p>You already have this course</p>
+        <p class="center-button">You already have this course</p>
     <% else %>
-        <%= link_to 'Buy', new_ownedcourse_path(:id => params[:id]) %>
+        <p class="center-button"><%= @course.price %>$   <%= link_to 'Buy', new_ownedcourse_path(:id => params[:id]), class: "button-1" %></p>
     <% end %>
 
+<% else %>
+        <p class="center-button"><%= @course.price %>$</p>
+        <p class="center-button">You need to sign in to buy courses! </p>
 <% end %>
+<br>
 
 <p> <%= link_to 'Back', courses_path %></p>
-
+<% else %>
+<p> You are not allowed to such content! </p>
+<% end %>
  </div>
 </div>
   

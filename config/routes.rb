@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  get 'welcome/faq'
+  get 'welcome/contacts'
+  get 'welcome/formanager'
   
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'

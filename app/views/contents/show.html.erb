@@ -9,12 +9,11 @@
 <% if user_signed_in? && current_user.role == 1%>
 
     
-    <%= course.name %>
     <%= raw @content.body %>
 
 <% elsif user_signed_in? && course_is_owned.size != 0  %>
     
-    <%= course.name %>
+    
     <%= raw @content.body %>
 
 <% else %>

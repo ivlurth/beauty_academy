@@ -1,23 +1,98 @@
 <%= render "shared/header"%>
 <div class = "courses">
     <div class = "content-text">
-<h1 class="page_name">OUR COURSES</h1>
+<h1 class="page_name">HAIR EXTENSION</h1>
+
+ <div>Become highly paid specialist in beaty-sphere. Hair extension is the procedure which help woman grow hair quickly than they possible. Want to fulfill somebody’s dream in beautiful hair? Bad consequences after illness? Hair extension course help in that.
+</div>
+
+
+<div class="paragraph">
+<p>
+Course consist of 2 parts: preparation hair for extension and hair extension. 
+</p>
+<br>
+<div class="images">
+<%= image_tag('IMG_6553.PNG', class: "show-image") %>
+</div>
+
+<h2 class="topic-name">Preparation hair for extension includes next topics:</h2>
+
+<ul>
+<li>Acquainted with the professional </li>
+<li>Different hair: South-russian and Slavic.</li>
+<li>Kinds of keratin</li>
+<li>Preparation hair: washing, capsulation, flash-capsulation</li>
+<li>Overview of tools</li>
+<li>Size of bonds </li>
+<li>Bonus: master-class «How to color hair as balayage»</li>
+</ul>
+
+<div class="images">
+<%= image_tag('11.jpg', class: "show-image") %>
+
+
+</div>
+
+<h2 class="topic-name">Hair Extension includes next topics:</h2>
+<ul>
+<li>Hair-fitting and consultation before extension</li>
+<li>Safety hair extension</li>
+<li>All secrets of invisible hair extension</li>
+</ul>
+
+</div>
+
+<div class="images">
+
+<%= image_tag('IMG_6555.PNG', class: "show-image") %>
+</div>
+
+<div class="paragraph">
+<p>By the way, during the education we will have 2 online-translations.
+In the first translation we going to tell about hair suppliers: what to expect and how to get away from fraud, what to pay attention to buying hair, « knots and shifters». Hair colored: features in blonde. Hair extension care, wearing period till correction. Сontraindications. Special Lizas secret. Safety removing: why the removing is the most dangerous step in hair extension? Mistakes analysis and answer the questions.</p>
+
+<p>
+In second translation we will learn basic marketing and Instagram. We answer the next questions:
+<ul>
+<li>The best networks for promotion</li>
+<li>How to make the selling profile?</li>
+<li>Work with models: how to get more profit?</li>
+<li>Portfolio and posts</li>
+<li>Advertising.</li>
+</ul>
+
+</p>
+
+
+
+<p>
+Sounds isn’t difficult, don’t you think? You will definitely succeed and my team and I will do everything possible for you can start earning as soon as possible. 
+</p>
+</div>
+<br>
+<h1 class="page_name">TARIFFS</h1>
+
 <% if user_signed_in? && current_user.role == 1%>
-    <% @course.each do |course|%>       
-        <p> <%= link_to "#{course.name}", course_path(course) %> </p>
+    <% @course.each do |course|%>  
+        <div class="course">     
+        <h1 class="course-name"> <%= link_to "#{course.name}", course_path(course) %> </h1>
         <p> <%= course.description_short %> </p>
-        <p> <%= course.price %> </p>
+        <p class="price"> <%= course.price %>$</p>
+        </div>
     <% end %>  
 
 <% else %>
+
+   
     
     <% @course.each do |course|%>
         <% if course.is_shown %>
             <div class="course">
-            <%= image_tag("user.png", class: "course-img")%> 
+             
             <h1 class="course-name"> <%= link_to "#{course.name}", course_path(course) %> </h1>
             <p><%= course.description_short %> </p>
-            <p><%= course.price %>$</p>
+            <p class="price"><%= course.price %>$</p>
             </div>
         <% end %>
     <% end %>

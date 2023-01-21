@@ -32,8 +32,8 @@ class ContentsController < ApplicationController
     end
 
     def edit
-        @course = Course.find(params[:id])
-        @content = Content.find(course_id = @course.id)
+        @content = Content.find(params[:id])
+       
     end
 
     def content_params
