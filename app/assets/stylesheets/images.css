@@ -142,6 +142,9 @@
         margin-top:0;
         margin-bottom:0;
     }
+    .attention-title {
+        font-size: 15pt;
+    }
 
     iframe {
         width: 240px;
