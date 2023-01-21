@@ -147,7 +147,7 @@ footer {
     font-family: 'Montserrat';
 }
 
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 390px) {
     .wrapper {
      width:390px;
      margin-left: auto;
@@ -173,8 +173,34 @@ footer {
     }
    }
 
+   @media only screen and (max-width: 430px) and (min-width: 399px){
+    .wrapper {
+     width:428px;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 10pt; 
+     
+    }
+    .header-icons {
+        height: 10pt;
+    }
+    header {
+        margin-top: 13pt;
+    }
+    .main-menu {
+        height: 40pt;
+    }
+    .main-menu-element {
+        height: 40pt;
+    }
+    .content-part {
+        width: 70%;
+        padding: 15pt;
+    }
+   }
 
-   @media only screen and (max-width: 768px) and (min-width: 450px) {
+
+   @media only screen and (max-width: 768px) and (min-width: 431px) {
     .wrapper {
      width:766px;
      margin-left: auto;
