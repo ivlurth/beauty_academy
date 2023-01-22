@@ -67,7 +67,7 @@
 
    .attention {
     
-    padding: 30pt;
+    padding: 20pt;
     margin-left: auto;
     margin-right: auto;
     margin-top:20pt;
@@ -133,7 +133,7 @@
     }
     .attention {
         font-size: 7pt;
-        width: 70%;
+        width: 85%;
         padding:15pt;
         margin-left: auto;
         margin-right: auto;
@@ -150,6 +150,11 @@
         width: 240px;
         height: 135px;
        }
+
+    .courses {
+        width: 70%;
+        padding: 15pt;
+    }
     
        
    }
