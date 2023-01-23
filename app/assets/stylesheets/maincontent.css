@@ -246,6 +246,27 @@ header {
 
 }
 
+@media only screen and (max-width: 430px) {
+    .content_section  {
+        padding-top: 20pt;
+        padding-bottom: 20pt;
+    }
+    .content-part {
+        width: 65%;
+        padding-top: 20pt;
+        padding-bottom: 20pt;
+        padding-left: 20pt;
+        padding-right:20pt;
+    }
+    .page_name {
+        margin-bottom: 10px;
+    }
+    .paragraph {
+        margin-top:25px;
+    }
+
+}
+
 .content-img {
     width: 200px;
     float: left;
