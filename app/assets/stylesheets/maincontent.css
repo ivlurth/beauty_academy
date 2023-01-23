@@ -79,78 +79,6 @@ header {
 }
 
 
-.content_section  {
-    background-color: #ffffff;
-    width:100%;
-    display: block;
-    padding: 20, 20, 20, 20;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40pt;
-    padding-bottom: 40pt;
-}
-
-.page_name {
-    font-size: 30pt;
-    margin:auto;
-    font-family: 'Forum';
-    text-align: center;
-    margin-bottom: 30px;
-    color:#FF4F85;
-}
-
-
-.content-part {
-    width: 60%;
-    border: solid;
-    border-color: #FF4F85;
-    border-radius: 20pt;
-    font-family: 'Montserrat';
-    padding:40px;
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-
-}
-
-.content-img {
-    width: 200px;
-    float: left;
-    margin: 10px;
-}
-
-footer {
-    background-color: #070580;
-    
-}
-
-
-
-.footer-two-columns {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20pt;
-    width:60%;
-    
-}
-
-.links {
-    width: 30%;
-
-}
-
-.info {
-    width: 60%;
-    color:#ffffff;
-    font-size: 15px;
-    font-family: 'Montserrat';
-}
-
 @media only screen and (max-width: 390px) {
     .wrapper {
      width:390px;
@@ -182,7 +110,6 @@ footer {
     
 }
     
- 
 
    @media only screen and (max-width: 430px) and (min-width: 399px){
     .wrapper {
@@ -279,6 +206,80 @@ footer {
     }
    
    }
+
+
+.content_section  {
+    background-color: #ffffff;
+    width:100%;
+    display: block;
+    padding: 20, 20, 20, 20;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40pt;
+    padding-bottom: 40pt;
+}
+
+.page_name {
+    font-size: 30pt;
+    margin:auto;
+    font-family: 'Forum';
+    text-align: center;
+    margin-bottom: 30px;
+    color:#FF4F85;
+}
+
+
+.content-part {
+    width: 60%;
+    border: solid;
+    border-color: #FF4F85;
+    border-radius: 20pt;
+    font-family: 'Montserrat';
+    padding:40px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+.content-img {
+    width: 200px;
+    float: left;
+    margin: 10px;
+}
+
+footer {
+    background-color: #070580;
+    
+}
+
+
+
+.footer-two-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20pt;
+    width:60%;
+    
+}
+
+.links {
+    width: 30%;
+
+}
+
+.info {
+    width: 60%;
+    color:#ffffff;
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+
 
 
 
