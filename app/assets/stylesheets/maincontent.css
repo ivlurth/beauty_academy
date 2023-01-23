@@ -51,6 +51,9 @@ header {
     
 }
 
+.header-icons {
+    height: 10pt;
+}
 
 
 
@@ -79,7 +82,7 @@ header {
 }
 
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 395px) {
     .wrapper {
      width:390px;
      margin-left: auto;
@@ -111,7 +114,7 @@ header {
 }
     
 
-   @media only screen and (max-width: 430px) and (min-width: 390px){
+   @media only screen and (max-width: 430px) and (min-width: 396px){
     .wrapper {
      width:428px;
      margin-left: auto;
