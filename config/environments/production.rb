@@ -13,7 +13,7 @@ Rails.application.configure do
   config.eager_load = true
 
 
-  config.action_mailer.default_url_options = { :host => 'https://beauty-academy-test.onrender.com' } #поменять!
+  config.action_mailer.default_url_options = { :host => 'https://beauty-academy.by' } #поменять!
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
