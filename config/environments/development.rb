@@ -13,6 +13,22 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+  
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {from: 'support@beauty-academy.by'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'mail.beauty-academy.by',
+  port:                 '465',
+  domain:               'localhost:3000',
+  user_name:            'support@beauty-academy.by',
+  password:             '8xBpCwmTQPrRZg9',
+  authentication:       :plain,
+  enable_starttls_auto: true  }
+
+
   # Show full error reports.
   config.consider_all_requests_local = true
 

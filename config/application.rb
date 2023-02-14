@@ -10,7 +10,7 @@ module Kek
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    config.secret_key_base = '<%= ENV["SECRET_KEY_BASE"] %>'
+    config.secret_key_base = '4f258b4991530e9419cc24b89b6dd1e91e7fdf991390935a962e938dc042bf492cdb07742f60cf2ec25ac09d273743d088ca79243565cb41de8e01dfd00ebf04'
 
     # Configuration for the application, engines, and railties goes here.
     #

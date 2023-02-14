@@ -21,11 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  production:
   adapter: mysql2
-  database: beautyac_production
+  database: beautyacadem_railsdb
   host: localhost
-  username: beautyac_ivlurth
+  username: beautyacadem_ivlurth
   password: "8xBpCwmTQPrRZg9"
   encoding: utf8
 
